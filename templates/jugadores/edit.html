@@ -1,0 +1,13 @@
+{% include 'hlayout.html'%}
+
+<form action="/update/{{jugador[0]}}" method="POST">
+    <input type="text" name="Name" placeholder="Name" value="{{jugador[1]}}">
+    <input type="text" name="Lastname" placeholder="Lastname" value="{{jugador[2]}}">
+    <input type="text" name="Age" placeholder="Age" value="{{jugador[3]}}">
+    <button class="submit" type="submit">
+        SAVE
+    </button>
+    <a href="/" class="home">BACK</a>
+
+</form>
+{% include 'flayout.html'%}

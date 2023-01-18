@@ -1,0 +1,113 @@
+body{
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin: 20px;
+    
+}
+main{
+    display: flex;
+}
+article{
+    width: auto;
+    margin: 10px;
+}
+form{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50vw;
+}
+input{
+    margin: 10px;
+    border: none;
+    outline: 0px;
+    border-bottom: 1px solid black;
+    padding-bottom: 15px;
+}
+.home,button{
+    font-size: 15px;
+}
+button{
+    margin-top: 20px;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.submit{
+    background-color: green;
+}
+.reset{
+    background-color: red;
+}
+.reset:hover{
+    background-color: darkred;
+    font-weight: bold;
+}
+.submit:hover{
+    background-color: darkgreen;
+    font-weight: bold;
+}
+table{
+    background-color: white;
+    width: 50%;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 10px;  
+    border: 1px solid rgba(180, 176, 176, 0.411);
+}
+tr:nth-child(even){
+    background-color: #ddd;
+}
+a{
+    border-radius: 3px;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+}
+a.edit{
+    background-color: green;
+}
+a.delete{
+    background-color: red;
+}
+p{
+    font-size: 20px;
+    background-color: goldenrod;
+    padding: 10px;
+    margin: 20px;
+    color: white;
+    border-radius: 5px;
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+}
+.home{
+    background-color: blue;   
+    text-align: center;
+    margin-top: 20px;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.home:hover{
+    background-color: darkblue;
+    font-weight: bold;
+}
+
+

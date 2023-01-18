@@ -1,0 +1,53 @@
+{% include 'hlayout.html'%}
+
+<main>
+<article>
+{% with messages = get_flashed_messages() %}
+ {% if messages %}
+ <div id="div">
+    <p id="p">
+        {% for message in messages %}
+         {{message}}
+        {% endfor %}
+        <i class="fa-sharp fa-solid fa-xmark" onclick="quitar();" style="cursor: pointer;"></i>
+      </p>
+ </div>
+ {% endif %}
+{% endwith %}
+<body>
+
+<form action="/create" method="POST">
+    <input type="text" name="Name" placeholder="Name">
+    <input type="text" name="Lastname" placeholder="Lastname">
+    <input type="text" name="Age" placeholder="Age">
+    <button class="submit"type="submit">
+        SAVE 
+    </button>
+    <button class="reset"type="reset">
+        RESET ALL
+    </button>
+</form>
+</article>
+<table>
+    <thead>
+        <tr>
+            <th>Apellido</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Operaciones</th>
+        </tr>
+    </thead>
+    <tbody>
+     {% for jugador in jugadores %}     
+     <tr>
+        <td>{{jugador[1]}}</td>
+        <td>{{jugador[2]}}</td>
+        <td>{{jugador[3]}}</td>
+        <td><a class="edit" href="/edit/{{jugador[0]}}">Edit</a> <a class="delete" href="/delete/{{jugador[0]}}">Delete</a></td>
+    
+     </tr> 
+     {%endfor%}   
+    </tbody>
+</table>
+</main>
+{% include 'flayout.html'%}
